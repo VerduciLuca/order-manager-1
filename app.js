@@ -24,12 +24,12 @@ client2.addOrder(order4)
 client2.addOrder(order5)
 
 
-const employee = new Employee('pippo', 'plutozzi', '6/6/1966', 'm', 34, 'vendite', this.clients);
+const employee = new Employee('pippo', 'plutozzi', '6/6/1966', 'm', 34, 'vendite');
 
 employee.addClient(client1);
 employee.addClient(client2);
 
-console.log(employee.bestClient())
 console.log(employee.toString())
-
+const bestClientofGianni = employee.bestClient()
+console.log(bestClientofGianni)
 

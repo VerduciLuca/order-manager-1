@@ -1,14 +1,14 @@
 class Employee extends Person{
-    constructor(name, surname, dob, gender, age, department, clients){
+    constructor(name, surname, dob, gender, age, department){
         super(name,surname, dob, gender, age);
         this.department = department;
-        this.clients = [];
+        this.clients = [] ;
     }
 
     toString(){
         return 'Dipendente:\n' + super.toString() +
-        'Miglior Cliente: ' + this.bestClient + '\n' +
-        ' guadagno totale: ' + this.totalEarning + '\n';
+        'Miglior Cliente: ' + this.bestClient() + '\n' +
+        ' guadagno totale: ' + this.totalEarning() + '\n';
     }
 
 
@@ -25,9 +25,9 @@ class Employee extends Person{
             bestClient = client;
         }
     }
-    return bestClient;
-
-    } 
+    // console.log(bestClient.name);
+    return bestClient.name;
+} 
 
     totalEarning(){
         
