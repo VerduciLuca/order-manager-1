@@ -1,7 +1,7 @@
 class Client extends Person{
     constructor(name, surname, dob, gender, age, address, orders){
         super(name,surname, dob, gender, age);
-        this.address = adress;
+        this.address = address;
         this.orders = orders;
 
     }
@@ -12,5 +12,7 @@ class Client extends Person{
         ' ordini: ' + this.orders + '\n';
     }
 
-
+    addOrder(order){
+        this.orders.push(order)
+    }
 }

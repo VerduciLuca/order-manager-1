@@ -1,9 +1,8 @@
 class Employee extends Person{
-    constructor(name, surname, dob, gender, age, bestClient, totalEarning){
+    constructor(name, surname, dob, gender, age, department, clients){
         super(name,surname, dob, gender, age);
-        this.bestClient = bestClient;
-        this.totalEarning = totalEarning;
-
+        this.department = department;
+        this.clients = [];
     }
 
     toString(){
@@ -13,4 +12,12 @@ class Employee extends Person{
     }
 
 
+    addClients(client){
+        this.clients.push(client)
+    }
+
+    bestClient(employee){
+        let bestClient=Math.max(...client.orders);
+        return bestClient
+    }
 }

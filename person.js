@@ -19,5 +19,7 @@ class Person{
     }
 
 
-
 }
+var x = new Person ('gianni','carlo',123,'m',90)
+
+x.toString()

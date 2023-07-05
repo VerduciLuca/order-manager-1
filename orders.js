@@ -7,4 +7,7 @@ class Order {
     }
 
 
+    totalPrice(){
+        return this.quantity * this.unitPrice;
+    }
 }
