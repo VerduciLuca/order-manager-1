@@ -9,7 +9,7 @@ class Person{
 
 
     toString(){
-        const card = 'Name:' + this.name +
+        const card = 'Name:' + this.name + '\n'+
         'Cognome:' + this.surname + '\n' +
         'Data di nascita:' + this.dob + '\n' +
         'Genere:' + this.gender + '\n' +
