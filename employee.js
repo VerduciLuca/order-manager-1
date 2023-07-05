@@ -12,12 +12,24 @@ class Employee extends Person{
     }
 
 
-    addClients(client){
+    addClient(client){
         this.clients.push(client)
     }
 
-    bestClient(employee){
-        let bestClient=Math.max(...client.orders);
-        return bestClient
+    bestClient(){
+        let maxOrders = 0;
+        let bestClient = null;
+        for (const client of this.clients) {
+        if (client.orders.length > maxOrders) {
+            maxOrders = client.orders.length;
+            bestClient = client;
+        }
+    }
+    return bestClient;
+
+    } 
+
+    totalEarning(){
+        
     }
 }

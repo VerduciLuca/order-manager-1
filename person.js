@@ -14,7 +14,6 @@ class Person{
         'Data di nascita:' + this.dob + '\n' +
         'Genere:' + this.gender + '\n' +
         'Età: ' + this.age + '\n';
-
         return card;
     }
 
