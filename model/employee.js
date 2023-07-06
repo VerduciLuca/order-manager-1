@@ -30,6 +30,6 @@ class Employee extends Person{
 } 
 
     totalEarning(){
-        
+        const totalEarning= this.clients.reduce((a,c) => a+c.totalExpenses,0)
     }
 }

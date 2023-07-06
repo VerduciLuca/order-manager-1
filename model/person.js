@@ -17,8 +17,18 @@ class Person{
         return card;
     }
 
+    get age(){
+        
+        const nowTimeStamp = new Date().getTime();
+        const dobTimeStamp = this.dob.getTime();
+        const deltaTimeStamp = nowTimeStamp-dobTimeStamp
+        const age= Math.floor(deltaTimeStamp / (1000 * 60 * 60 * 24 * 365));        //floor arrotonda in giù, ceiling beh ecco si
+
+        return age
+    }
+
 
 }
-var x = new Person ('gianni','carlo',123,'m',90)
+var x = new Person ('gianni','carlo',new Date(),'m',90)
 
 x.toString()

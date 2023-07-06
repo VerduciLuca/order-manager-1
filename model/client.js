@@ -1,4 +1,5 @@
 class Client extends Person{
+
     constructor(name, surname, dob, gender, age, address, orders){
         super(name,surname, dob, gender, age);
         this.address = address;
@@ -17,6 +18,7 @@ class Client extends Person{
     }
 
     totalExpenses(){
-        this.orders.totalPrice().reduce((a,c) => a+c)
+        const totalExpenses = this.orders.reduce((a,c) => a+c.totalPrice(),0)
+        return totalExpenses
     }
 }
